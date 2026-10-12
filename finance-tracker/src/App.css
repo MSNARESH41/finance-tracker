@@ -1,0 +1,340 @@
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #1b2939;
+  background: #f4f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  width: min(1180px, 100%);
+  margin: auto;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0 22px;
+  border-bottom: 1px solid #e4eaf1;
+}
+
+.logo {
+  color: #173d34;
+  font-family: "Manrope", sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.header p {
+  color: #7c899a;
+  font-size: 13px;
+}
+
+.welcome {
+  padding: 32px 0 24px;
+}
+
+.eyebrow {
+  color: #16866a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.welcome h1 {
+  margin: 8px 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(28px, 4vw, 40px);
+  letter-spacing: -1.3px;
+}
+
+.welcome p:last-child {
+  color: #8290a1;
+  font-size: 14px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.card,
+.panel {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #e6ebf2;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgb(30 50 70 / 4%);
+}
+
+.card {
+  padding: 22px;
+}
+
+.card p {
+  margin: 0 0 14px;
+  color: #7e8b9d;
+  font-size: 13px;
+}
+
+.card h2 {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(20px, 2.5vw, 28px);
+}
+
+.balance-card {
+  color: #fff;
+  background: #173d34;
+  border-color: #173d34;
+}
+
+.balance-card p {
+  color: #c0d8cf;
+}
+
+.income {
+  color: #16866a !important;
+}
+
+.expense {
+  color: #d75d65 !important;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.85fr) minmax(0, 1.4fr);
+  align-items: start;
+  gap: 22px;
+}
+
+.panel {
+  padding: 24px;
+}
+
+.panel h2 {
+  margin: 0 0 20px;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+}
+
+form label {
+  display: block;
+  margin: 15px 0 7px;
+  color: #526075;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+form input,
+form select,
+.list-heading select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  color: #26364a;
+  background: #fff;
+  border: 1px solid #e0e7ef;
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+form input:focus,
+form select:focus,
+.list-heading select:focus {
+  outline: 2px solid #c1e8d9;
+  border-color: #16866a;
+}
+
+.primary-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+  color: white;
+  background: #173d34;
+  border: none;
+  border-radius: 9px;
+  font-weight: 700;
+}
+
+.primary-button:hover {
+  background: #24594c;
+}
+
+.error {
+  margin: 12px 0 0;
+  color: #c23e4b;
+  font-size: 12px;
+}
+
+.list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.list-heading h2 {
+  margin-bottom: 18px;
+}
+
+.list-heading select {
+  width: auto;
+  max-width: 130px;
+  margin-bottom: 18px;
+}
+
+.empty {
+  padding: 48px 12px;
+  text-align: center;
+}
+
+.empty p {
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.empty span {
+  color: #8794a5;
+  font-size: 12px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.transaction-info strong {
+  overflow-wrap: anywhere;
+  font-size: 13px;
+}
+
+.transaction-info span {
+  color: #8a96a6;
+  font-size: 11px;
+}
+
+.transaction-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.transaction-actions strong {
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.delete-button {
+  padding: 0;
+  color: #9b6670;
+  background: none;
+  border: none;
+  font-size: 11px;
+}
+
+.delete-button:hover {
+  color: #c23e4b;
+  text-decoration: underline;
+}
+
+.clear-button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 10px;
+  color: #c23e4b;
+  background: #fff;
+  border: 1px solid #f1d8db;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.clear-button:hover {
+  background: #fff5f5;
+}
+
+footer {
+  padding: 25px 0 8px;
+  color: #8b97a7;
+  text-align: center;
+  font-size: 11px;
+}
+
+@media (max-width: 800px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .app {
+    padding: 14px;
+  }
+
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .header p {
+    margin-bottom: 4px;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .panel {
+    padding: 18px 14px;
+  }
+
+  .transaction {
+    align-items: flex-start;
+  }
+}
